@@ -1,0 +1,173 @@
+body {
+  /* background-color:purple; */
+  margin: 0;
+  font-family: Montserrat;
+}
+
+#map {
+  height: 100vh;
+  width: 100%;
+  border: none;
+  z-index: 0;
+}
+
+.layerContainer {
+  display: inline;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  height: 100vh;
+  width: 20%;
+  transition: 0.5s;
+  /* overflow-x: hidden; */
+  flex-shrink: 0;
+  background-image: linear-gradient(120deg, rgba(0,76,109,1) 0%, rgba(65,144,180,1) 35%, rgba(121,219,255,1) 100%);
+  /* background-color: #004c6d; */
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;;
+  margin-left: -20%;
+  /* flex-direction: column; */
+  /* visibility: hidden; */
+}
+
+.search {
+  display: flex;
+  position: absolute;
+  margin-left: 115%;
+  z-index: 1001;
+  top: 20;
+  border: none;
+  border-radius: 5px;
+}
+
+.searchInput {
+  border: none;
+  /* border-radius: ; */
+  background-color: transparent;
+  border-bottom: #000000 solid;
+}
+
+.searchAdd {
+  cursor: pointer;
+  /* border: 2px solid red; */
+}
+
+.layerContainer.open {
+  margin-left: 0;
+}
+
+.layerContainer-toggle {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  border-radius: 0 5px 5px 0;
+  flex-shrink: 0;
+  z-index: 1000;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.layerContainer-toggle:hover {
+  background-color: rgba(121,219,255,1)
+}
+
+.collapseButton {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 12px 5px 12px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: white;
+  transition: 0.3s;
+}
+
+.collapseButton:hover {
+  color: black;
+  background-color: #256d90;
+}
+ 
+h2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+  margin-bottom: 12px;
+  border: none;
+  transition: 0.3s;
+}
+
+h4 {
+  margin: 0 0 5px;
+  color: #000000;
+}
+
+
+
+.layerInfo {
+  display: flex;
+  border: none;
+  flex: 1;
+  transition: 0.3s;
+}
+
+button {
+  border: none;
+  /* opacity: 0.1; */
+  background-color: transparent;
+}
+
+.toggle-layer-on {
+  display: none !important;
+}
+
+/* .batasDesa {
+  border: 2px solid red;
+  
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  list-style: none;
+} */
+
+.material-symbols-outlined {
+  font-size: 50px;
+}
+
+.toggle-layer-on, .toggle-layer-off {
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.layer-on .toggle-layer-on {
+  display: initial !important;
+}
+
+.info {
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+.layer-on .toggle-layer-off {
+  display: none !important;
+}
+
+.leaflet-bar {
+  visibility: hidden;
+}
